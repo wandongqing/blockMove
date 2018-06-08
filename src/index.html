@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/index.css" />
+		<title></title>
+	</head>
+	<body>
+		<div><span>★</span></div>
+	</body>
+</html>
+<script type="text/javascript" src="js/index.js" ></script>
+<script type="text/javascript" src="js/moveX.js" ></script>
+<script type="text/javascript" src="js/moveY.js" ></script>
+<!--<script type="text/javascript" src="../dist/index.min.js" ></script>-->
+<script>
+	var ball=new Ball();
+	  requestAnimationFrame(function(){
+	  	    ball.moveX();
+	  	    ball.moveY();
+	  	    requestAnimationFrame(arguments.callee)
+	  })
+</script>
